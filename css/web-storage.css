@@ -1,0 +1,57 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ul{list-style: circle;}
+
+b, strong { font-weight: bold }
+
+img {margin-top: 50px;}
+
+.step h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.step ul {
+  margin-top: 80px;
+}
+
+#cookie b {
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  -moz-transition:    0.5s;
+  -ms-transition:     0.5s;
+  -o-transition:      0.5s;
+  transition:         0.5s;
+}
+
+#cookie.present .positioning {
+  -webkit-transform: translateY(-10px);
+  -moz-transform:    translateY(-10px);
+  -ms-transform:     translateY(-10px);
+  -o-transform:      translateY(-10px);
+  transform:         translateY(-10px);
+}
+
+#third_party_library ul {
+  margin-left: 130px;
+}
