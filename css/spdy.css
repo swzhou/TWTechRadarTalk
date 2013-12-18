@@ -26,9 +26,9 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
-    list-style: none;
-}
+/*ol, ul {*/
+    /*list-style: none;*/
+/*}*/
 blockquote, q {
     quotes: none;
 }
@@ -104,8 +104,8 @@ a:focus {
 .step {
     position: relative;
     width: 1000px;
-    /*padding: 40px;*/
-    /*margin: 20px auto;*/
+    padding: 40px;
+    margin: 20px auto;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -133,5 +133,16 @@ a:focus {
     opacity: 1
 }
 
+.step p {
+    margin-bottom: 30px;
+}
+
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
+
+#used-by .used-by { margin: 20px 0 0 100px; font-size: 36px; }
+
+#spdy-proven-goal { text-align: center; }
+#spdy-proven-goal .percentage { font-size: 128px; }
+
+#optimizations-or-workarounds { text-align: center; }

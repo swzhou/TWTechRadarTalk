@@ -25,21 +25,96 @@
 </div>
 
 <div id="impress">
-    <div id="radar" class="step" data-x=0 data-y=0></div>
-    <div id="radar-platform" class="step" data-x="-250" data-y="210" data-scale="0.5"></div>
-    <div id="radar-spdy" class="step" data-x="-280" data-y="200" data-rotate-x="-50" data-scale="0.5"></div>
+    <div id="radar" class="step" data-x=0 data-y=0 data-z="10000"></div>
+    <div id="radar-platform" class="step" data-x="-250" data-y="210" data-z="10000" data-scale="0.5"></div>
+    <div id="radar-spdy" class="step" data-x="-280" data-y="200" data-z="10000" data-rotate-x="-50" data-scale="0.5"></div>
 
-    <div id="spdy-intro" class="step" data-z="-10000">
-        <p>Make the web more <span class="s">S</span><span class="p">P</span><span class="e1">e</span><span class="e2">e</span><span class="d">D</span><span class="y">Y</span>!</p>
-        <p>Up to
-            <span>64%</span>
-            reductions in page load times!
-        </p>
-        <pre></pre>
+    <div id="spdy-intro-1" class="step">
+        <p><strong>SPDY</strong> is an experiment with protocols for the web by Google started over 3 years ago.</p>
+        <p>It is the basis of <strong>HTTP/2.0</strong>.</p>
+        <p>Its goal is to reduce the latency of web pages.</p>
     </div>
 
-    <div id=""></div>
+    <div id="used-by" class="step" data-x="2000">
+        <p>It is being used by:</p>
+        <ul class="used-by">
+            <li>Google Chrome & All Google Web Properties</li>
+            <li>Mozilla Firefox</li>
+            <li>Twitter</li>
+            <li>Amazon Silk</li>
+            <li>Others: Cotendo, Strangeloop, iPhone client, Apache mod-spdy, nginx, jetty, netty, libraries in python, node.js, erlang, ruby, go, and C</li>
+        </ul>
+    </div>
 
+    <div id="spdy-proven-goal" class="step" data-x="4000">
+        <p>Up to</p>
+        <p><strong class="percentage">64%</strong></p>
+        <p>reductions</p>
+        <p>in</p>
+        <p>page load times!</p>
+    </div>
+
+    <div id="why-it-matters" class="step" data-x="6000">
+        <p>So why page load time matters?</p>
+    </div>
+
+    <div id="background" class="step" data-x="8000">
+        <p>HTML document + a few images</p>
+        <p>HTML document + images + css + scripts</p>
+        <p>HTML documents + images + css + scripts + AJAX calls</p>
+        <p>More and more requests are needed when loading a single web page!</p>
+        <p>Requirements have changed!</p>
+    </div>
+
+    <div id="the-problem" class="step" data-x="10000">
+        <p>What's wrong with HTTP/1.0 and HTTP/1.1 now?</p>
+        <ul>
+            <li>Single request per connection</li>
+            <li>Exclusively client-initiated requests</li>
+            <li>Uncompressed request and response headers</li>
+            <li>Redundant headers</li>
+            <li>Optional data compression</li>
+        </ul>
+    </div>
+
+    <div id="optimizations-or-workarounds" class="step" data-x="12000">
+        <p><strong>Optimizations</strong></p>
+        <p>or</p>
+        <p><strong>workarounds</strong>?</p>
+    </div>
+
+    <div id="the-stack" class="step" data-x="14000">
+        <img src="spdy/spdy-in-network-stack.png" width="801" height="396" alt="the stack" />
+    </div>
+
+    <div id="the-features" class="step" data-x="16000">
+        <ul>
+            <li>Multiplexed streams</li>
+            <li>Request prioritization</li>
+            <li>HTTP header compression</li>
+            <li>Server push</li>
+            <li>Server hint</li>
+        </ul>
+    </div>
+
+    <div id="demo-time" class="step" data-x="18000">
+        <p>Now comes the <strong>demo time</strong>!</p>
+    </div>
+
+    <div id="last-but-not-least" class="step" data-x="20000">
+        <p>Last but not least</p>
+        <ul>
+            <li>Google websites? Use Chrome!</li>
+            <li>What SPDY means for RESTful Web APIs? For mobile apps?</li>
+            <li>SPDY, experimental?</li>
+        </ul>
+    </div>
+
+    <div id="q-and-a" class="step" data-x="22000">
+        <p>Developers</p>
+        <p>When that day comes</p>
+        <p>What our world would become</p>
+    </div>
 </div>
 
 <script type="text/javascript" src="js/impress.js"></script>
