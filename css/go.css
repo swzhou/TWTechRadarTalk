@@ -26,6 +26,9 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
+/*ol, ul {*/
+/*list-style: none;*/
+/*}*/
 blockquote, q {
     quotes: none;
 }
@@ -100,9 +103,9 @@ a:focus {
 
 .step {
     position: relative;
-    width: 900px;
-    /*padding: 40px;*/
-    /*margin: 20px auto;*/
+    width: 1000px;
+    padding: 40px;
+    margin: 20px auto;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -113,40 +116,6 @@ a:focus {
     font-family: 'PT Serif', georgia, serif;
     font-size: 48px;
     line-height: 1.5;
-}
-
-.slide {
-    display: block;
-
-    width: 900px;
-    height: 700px;
-    padding: 40px 60px;
-
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, .3);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-
-    color: rgb(102, 102, 102);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 30px;
-    line-height: 36px;
-    letter-spacing: -1px;
-}
-
-
-.slide h2, .slide q {
-    display: block;
-    font-size: 50px;
-    line-height: 72px;
-
-    margin-top: 100px;
-}
-
-.slide q strong {
-    white-space: nowrap;
 }
 
 .impress-enabled .step {
@@ -164,19 +133,39 @@ a:focus {
     opacity: 1
 }
 
+.step p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.step h1 {
+    margin-bottom: 30px;
+}
+
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
-.step h2 {
-    text-align: center;
-    font-size: 50px;
+#used-by .used-by { margin: 20px 0 0 100px; font-size: 36px; }
 
+#spdy-proven-goal { text-align: center; }
+#spdy-proven-goal .percentage { font-size: 128px; }
+
+#optimizations-or-workarounds { text-align: center; }
+
+.lang-type {
+    font-size: 30px;
 }
 
-#csp > blockquote, #csp > p {
-    text-align: center;
+.lang-type input {
+    margin-left: 30px;
 }
 
-#csp > p {
+.lang-go {
+    font-size: 20px;
+    float: left;
+    margin-right: 50px;
+}
 
+.quote {
+    float: right;
 }

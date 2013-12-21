@@ -1,0 +1,226 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=1024"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Let's Go!</title>
+
+    <meta name="description" content="Go Language"/>
+    <meta name="author" content="Shiwei Zhou"/>
+
+    <link href="css/prettify.css" rel="stylesheet"/>
+    <link href="css/go.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+</head>
+
+<body class="impress-not-supported" onload="prettyPrint()">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
+        version of this presentation.</p>
+
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    <div id="radar" class="step" data-x=0 data-y=0 data-z="10000"></div>
+    <div id="radar-language" class="step" data-x="250" data-y="210" data-z="10000" data-scale="0.5"></div>
+    <div id="radar-go" class="step" data-x="280" data-y="200" data-z="10000" data-rotate-x="-50" data-scale="0.5"></div>
+    <div class="step">
+        <h1>go语言的定位</h1>
+        <ul>
+            <li>面向21世纪的系统编程语言 —— C, C++的替代者</li>
+            <li>未来服务端开发的主流编程语言之一</li>
+        </ul>
+    </div>
+    <div class="step" data-rotate-x="-90">
+        <h1>go语言的分类学特征</h1>
+
+        <p class="lang-type">
+            <input type="radio" checked>静态类型
+            <input type="radio">动态类型
+        </p>
+
+        <p class="lang-type">
+            <input type="radio" checked>编译型
+            <input type="radio">解释型
+        </p>
+
+        <p class="lang-type">
+            <input type="radio">面向过程
+            <input type="radio" checked>面向对象
+        </p>
+    </div>
+    <div class="step" data-rotate-y="90">
+        <h1><strong>“大”</strong>的编程语言</h1>
+    </div>
+    <div class="step" data-rotate="90" data-x="1200">
+        <h1>大公司</h1>
+
+        <p><img src="go/google.png"></p>
+    </div>
+    <div class="step" data-x="2400" data-y="800">
+        <h1>大牛人</h1>
+        <ul>
+            <li><strong>Robert Griesemer</strong>：曾协助制作Java的HotSpot编译器和Chrome浏览器的JavaScript引擎V8</li>
+            <li><strong>Rob Pike</strong>：曾是贝尔实验室的Unix团队和Plan9操作系统计划成员，与Thompson工同创造了UTF-8字符编码</li>
+            <li><strong>Ken Thompson</strong>：是C语言和Unix的创造者。（1983年图灵奖和1988国家技术奖）</li>
+        </ul>
+    </div>
+    <div class="step" data-x="2400" data-y="1600">
+        <h1>大问题 - 大项目的问题</h1>
+    </div>
+    <div class="step" data-x="2400" data-y="2400">
+        <h1>开发阶段</h1>
+        <ul>
+            <li>多语言</li>
+            <li>程序难以理解</li>
+            <li>更新代价大</li>
+        </ul>
+    </div>
+    <div class="step" data-x="3600" data-y="2400" data-rotate="90">
+        <h1>编译阶段</h1>
+        <ul>
+            <li>Build速度慢</li>
+            <li>依赖关系复杂</li>
+            <li>难以编写自动化工具</li>
+        </ul>
+    </div>
+    <div class="step" data-x="3600" data-y="2400" data-rotate="90" data-rotate-x="-90">
+        <h1>运行阶段</h1>
+
+        <p>大并发，高访问量，系统的水平扩展性</p>
+    </div>
+    <div class="step" data-x="3600" data-y="3600" data-rotate="90" data-rotate-x="-90">
+        <p><img src="go/dadaozhijian.jpg"></p>
+    </div>
+    <div class="step" data-x="3600" data-y="2400" data-rotate="90" data-rotate-y="-90">
+        <h1>开发阶段</h1>
+
+        <p>惜字如金：25个关键字 （c语言32个，java语言53个）</p>
+        <pre class="prettyprint lang-go">
+//accessable to outside world
+func DoSomething() int {}
+
+//only accessable from inside
+func internal()  int {}
+        </pre>
+    </div>
+    <div class="step" data-x="4800" data-y="2400">
+        <h1>开发阶段</h1>
+
+        <p>简化的类型体系 —— 没有继承，基于组合</p>
+        <pre class="prettyprint lang-go">
+package main
+
+import "fmt"
+
+type Duck struct {
+	Name string
+}
+
+func (d *Duck) Eat() {
+	fmt.Println(d.Name, "Duck is having dinner!")
+}
+        </pre>
+        <pre class="prettyprint lang-go">
+type DonaldDuck struct {
+	Duck
+	Age int
+}
+
+func main() {
+	d := new(DonaldDuck)
+	d.Name = "Donald"
+	d.Age = 10
+	d.Eat()
+}
+        </pre>
+    </div>
+    <div class="step" data-x="6000" data-y="2400">
+        <h1>开发阶段</h1>
+        <p>各种小工具的提供</p>
+        <ul>
+            <li>godoc</li>
+            <li>gofmt</li>
+            <li>gofix</li>
+        </ul>
+    </div>
+    <div class="step" data-x="6000" data-y="1600">
+        <h1>编译阶段</h1>
+        <p>“如果Go需要一个配置文件，描述如何编译和构建Go写的程序，那就是Go的失败。”</p>
+        <p class="quote"> —— Go官方文档</p>
+    </div>
+    <div class="step" data-x="6000" data-y="-1000" data-rotate="90">
+        <h1>编译阶段</h1>
+        <ul>
+            <li>import</li>
+            <li>go get</li>
+            <li>go build</li>
+            <li>快速编译</li>
+        </ul>
+    </div>
+    <div class="step" data-x="6000" data-y="-1000" data-rotate="90" data-rotate-x="90">
+        <h1>编译阶段</h1>
+        <p>在一起：只有<strong>一个</strong>可执行文件</p>
+    </div>
+    <div class="step" data-x="6000" data-y="-2000">
+        <h1>运行阶段</h1>
+        <ul>
+            <li>基于CSP的并发编程模型</li>
+            <li>语言层面对并发编程的支持：goroutine, channel</li>
+        </ul>
+    </div>
+    <div class="step" data-x="7200" data-y="-1000">
+        <h1>运行阶段 - goroutine</h1>
+        <pre class="prettyprint lang-go">
+f("hello", "world") // f runs; we wait
+
+go f("hello", "world") // f starts running
+g() // does not wait for f to return
+        </pre>
+    </div>
+    <div class="step" data-x="7200" data-y="-1000" data-rotate-x="-90">
+        <h1>运行阶段 - channel</h1>
+        <pre class="prettyprint lang-go">
+timerChan := make(chan time.Time)
+go func() {
+    time.Sleep(deltaT)
+    timerChan <- time.Now() // send time on timerChan
+}()
+// Do something else; when ready, receive.
+// Receive will block until timerChan delivers.
+// Value sent is other goroutine's completion time.
+completedAt := <-timerChan
+        </pre>
+    </div>
+    <div class="step" data-x="7200" data-y="-1000" data-rotate="-90" data-scale="0.1">
+        <h1>运行阶段 - 从多个duplicated数据源中访问数据库</h1>
+        <pre class="prettyprint lang-go">
+func Query(conns []Conn, query string) Result {
+    ch := make(chan Result, len(conns))  // buffered
+    for _, conn := range conns {
+        go func(c Conn) {
+            ch <- c.DoQuery(query):
+        }(conn)
+    }
+    return <-ch
+}
+        </pre>
+    </div>
+    <div class="step" data-x="7200" data-y="-2000" data-rotate="-90" data-scale="0.1">
+        <h1>工程实践派的典范</h1>
+    </div>
+</div>
+
+<script src="js/prettify.js"></script>
+<script src="js/impress.js"></script>
+<script src="js/raphael-min.js"></script>
+<script type="text/javascript" src="js/radar-go.js"></script>
+
+</body>
+</html>
