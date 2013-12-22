@@ -6,9 +6,14 @@ pre {
 }
 
 pre.small {
-    font-size:17px;
+    font-size:22px;
 }
 
+pre.medium {
+    font-size:30px;
+}
+
+
 pre.big {
-    font-size:28px;
+    font-size:36px;
 }
