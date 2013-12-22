@@ -55,3 +55,23 @@ img {margin-top: 50px;}
 #third_party_library ul {
   margin-left: 130px;
 }
+
+.instead {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: grey;
+}
+
+#first_step.present .scaling {
+  -webkit-transform: scale(1.2);
+  -moz-transform:    scale(1.2);
+  -ms-transform:     scale(1.2);
+  -o-transform:      scale(1.2);
+  transform:         scale(1.2);
+
+  -webkit-transition-delay: 1.0s;
+  -moz-transition-delay:    1.0s;
+  -ms-transition-delay:     1.0s;
+  -o-transition-delay:      1.0s;
+  transition-delay:         1.0s;
+}
