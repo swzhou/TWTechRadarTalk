@@ -118,19 +118,36 @@ a:focus {
     line-height: 1.5;
 }
 
-.impress-enabled .step {
+.impress-enabled .step.fade {
     margin: 0;
-    /*opacity: 0.3;*/
+    opacity: 0;
 
-    /*-webkit-transition: opacity 1s;*/
-    /*-moz-transition:    opacity 1s;*/
-    /*-ms-transition:     opacity 1s;*/
-    /*-o-transition:      opacity 1s;*/
-    /*transition:         opacity 1s;*/
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
 }
 
-.impress-enabled .step.active {
-    opacity: 1
+.impress-enabled .step.fade.active {
+    opacity: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.fade.past {
+    opacity: 1;
+}
+
+.step h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .step p {
@@ -140,9 +157,29 @@ a:focus {
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
+#radar, #radar-platform, #radar-spdy { opacity: 1; }
+
 #used-by .used-by { margin: 20px 0 0 100px; font-size: 36px; }
 
 #spdy-proven-goal { text-align: center; }
 #spdy-proven-goal .percentage { font-size: 128px; }
 
+.story-item p { margin-left: 100px; }
+
 #optimizations-or-workarounds { text-align: center; }
+
+.fade-in { opacity: 0; }
+.step.active .fade-in {
+    opacity: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+.step.past .fade-in { opacity: 1; }
+
+.step.active .delay-3 { transition-delay: 3s; }
+.step.active .delay-6 { transition-delay: 6s; }
+.step.active .delay-9 { transition-delay: 9s; }
+.step.active .delay-12 { transition-delay: 12s; }

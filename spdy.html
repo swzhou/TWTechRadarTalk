@@ -30,13 +30,14 @@
     <div id="radar-spdy" class="step" data-x="-280" data-y="200" data-z="10000" data-rotate-x="-50" data-scale="0.5"></div>
 
     <div id="spdy-intro-1" class="step">
+        <h2>What is it?</h2>
         <p><strong>SPDY</strong> is an experiment with protocols for the web by Google started over 3 years ago.</p>
         <p>It is the basis of <strong>HTTP/2.0</strong>.</p>
         <p>Its goal is to reduce the latency of web pages.</p>
     </div>
 
     <div id="used-by" class="step" data-x="2000">
-        <p>It is being used by:</p>
+        <h2>It is being used by</h2>
         <ul class="used-by">
             <li>Google Chrome & All Google Web Properties</li>
             <li>Mozilla Firefox</li>
@@ -54,20 +55,24 @@
         <p>page load times!</p>
     </div>
 
-    <div id="why-it-matters" class="step" data-x="6000">
-        <p>So why page load time matters?</p>
+    <div id="background" class="step" data-x="6000" data-y="5000" data-rotate="90">
+        <h2>What are on a web page?</h2>
+        <ul>
+            <li>HTML document</li>
+            <li class="fade-in delay-3">Images</li>
+            <li class="fade-in delay-6">Stylesheets</li>
+            <li class="fade-in delay-9">Scripts</li>
+            <li class="fade-in delay-12">AJAX</li>
+        </ul>
     </div>
 
-    <div id="background" class="step" data-x="8000">
-        <p>HTML document + a few images</p>
-        <p>HTML document + images + css + scripts</p>
-        <p>HTML documents + images + css + scripts + AJAX calls</p>
+    <div id="story-end" class="step hidden" data-x="8000">
+        <h2>Requirements have changed!</h2>
         <p>More and more requests are needed when loading a single web page!</p>
-        <p>Requirements have changed!</p>
     </div>
 
     <div id="the-problem" class="step" data-x="10000">
-        <p>What's wrong with HTTP/1.0 and HTTP/1.1 now?</p>
+        <h2>What's not so good with HTTP/1.0 and HTTP/1.1 now?</h2>
         <ul>
             <li>Single request per connection</li>
             <li>Exclusively client-initiated requests</li>
@@ -78,16 +83,18 @@
     </div>
 
     <div id="optimizations-or-workarounds" class="step" data-x="12000">
-        <p><strong>Optimizations</strong></p>
+        <h2>Optimizations</h2>
         <p>or</p>
-        <p><strong>workarounds</strong>?</p>
+        <h2>workarounds?</h2>
     </div>
 
     <div id="the-stack" class="step" data-x="14000">
+        <h2>SPDY comes to play</h2>
         <img src="spdy/spdy-in-network-stack.png" width="801" height="396" alt="the stack" />
     </div>
 
     <div id="the-features" class="step" data-x="16000">
+        <h2>SPDY features</h2>
         <ul>
             <li>Multiplexed streams</li>
             <li>Request prioritization</li>
@@ -98,22 +105,16 @@
     </div>
 
     <div id="demo-time" class="step" data-x="18000">
-        <p>Now comes the <strong>demo time</strong>!</p>
+        <h2>Now comes the <strong>demo time</strong>!</h2>
     </div>
 
     <div id="last-but-not-least" class="step" data-x="20000">
-        <p>Last but not least</p>
+        <h2>Last but not least</h2>
         <ul>
             <li>Google websites? Use Chrome!</li>
-            <li>What SPDY means for RESTful Web APIs? For mobile apps?</li>
-            <li>SPDY, experimental?</li>
+            <li>What it means for RESTful web services? For mobile apps?</li>
+            <li>SPDY, experimental!</li>
         </ul>
-    </div>
-
-    <div id="q-and-a" class="step" data-x="22000">
-        <p>Developers</p>
-        <p>When that day comes</p>
-        <p>What our world would become</p>
     </div>
 </div>
 
