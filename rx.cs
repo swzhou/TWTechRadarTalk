@@ -1,7 +1,10 @@
 
 
-public void MeasurementsChanged(int temp, int humidity, int windPower)
+public void MeasurementsChanged()
 {
+	var temp = GetTemp();
+	var humidity = GetHumidity();
+	var windPower = GetWindPower();
     if (temp > 5)
     {
         seedingMachine.Start();

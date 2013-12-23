@@ -132,17 +132,17 @@ query.Subscribe(Console.WriteLine);
 
     <div class="step" data-x="800" data-y="0"  data-rotate="180">
         <pre class="prettyprint medium">
-public void MeasurementsChanged(
-    int temp, int humidity, int windPower)
+public void MeasurementsChanged()
 {
+    var temp = GetTemp();
+    var humidity = GetHumidity();
+    var windPower = GetWindPower();
     if (temp > 5)
     {
         seedingMachine.Start();
-
         if (humidity > 65)
             reapingMachine.Start();
     }
-
     if (temp > 10 && humidity < 55 && windPower < 4)
         wateringMachine.Start();
 }            
