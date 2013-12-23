@@ -34,7 +34,7 @@
     <div id="radar-language" class="step" data-x="250" data-y="210" data-z="10000" data-scale="0.5"></div>
     <div id="radar-rx" class="step" data-x="280" data-y="200" data-z="10000" data-rotate-x="-50" data-scale="0.5"></div>
 
-    <div class="step" data-x="3000">
+    <div class="step" data-x="3300">
          <ul>
              <li>Number of nodes: <span class="previous">tens of</span> -> <span class="now">thousands of</span></li>
              <li>Response time: <span class="previous">seconds</span> -> <span class="now">mill/mico seconds</span></li>
@@ -43,13 +43,27 @@
          </ul>
     </div>
     
-    <div class="step" data-x="3000" data-y="-1500">
+    <div class="step" data-x="3300" data-y="-1500">
         <p><img src="image/full-reactive.png"></p>
     </div>
 
     <div class="step" data-x="0" data-y="-1500">
-        <p>Interactive vs Reactive</p>
-        <p>Pull Model  vs Push Model</p>
+        <div class="left">
+            <h1><b>Interactive</b></h1>
+            <ul>
+                <li>Pull model</li>
+                <li>Comsumers rely on Producers</li>
+                <li>Synchronous</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h1><b>Reactive</b></h1>
+            <ul>
+                <li>Push model</li>
+                <li>Comsumers don't rely on Producers</li>
+                <li>Asynchronous</li>
+            </ul>
+        </div>
     </div>
 
     <div class="step" data-x="0" data-y="-800">
@@ -62,7 +76,7 @@
 
     </div>
 
-    <div class="step" data-x="2000" data-y="-1000">
+    <div class="step" data-x="2000" data-y="-800">
         <h1><b>Duality of Iterator and Observer</b></h1><br>
         <div style="float:left">
             <pre class="prettyprint small">
@@ -99,7 +113,7 @@ public interface IEnumerator<T>
         
     </div>
 
-    <div class="step" data-x="2000" data-y="0" data-rotate="90">
+    <div class="step" data-x="2000" data-y="300" data-rotate="90">
         <pre class="prettyprint big">
 var numbers = Enumerable.Range(0, 10);
 var query = from number in numbers
@@ -132,6 +146,24 @@ public void MeasurementsChanged(
     if (temp > 10 && humidity < 55 && windPower < 4)
         wateringMachine.Start();
 }            
+        </pre>
+
+    </div>
+
+
+    <div class="step" data-x="-500" data-y="0" data-rotate="180">
+        <pre class="prettyprint small">
+public class SeedingMachineObserver : IObserver<WeatherData>
+{
+    public void OnNext(WeatherData weatherData)
+    {
+        seedingMachine.Start();
+    }
+}
+
+var weatherData = GetWeatherData();
+var seedingMachineObservable = from data in weatherData where data.Temp > 5 select data;
+seedingMachineObservable.Subscribe(new SeedingMachineObserver());            
         </pre>
 
     </div>

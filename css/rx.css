@@ -170,3 +170,13 @@ a:focus {
     float: right;
 }
 
+.left {
+    float: left;
+    font-size: 30px;
+}
+
+.right {
+    float: right;
+    font-size: 30px;
+}
+
