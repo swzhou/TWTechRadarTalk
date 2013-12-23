@@ -169,3 +169,7 @@ a:focus {
 .quote {
     float: right;
 }
+
+.super-big {
+    font-size: 100px;
+}
